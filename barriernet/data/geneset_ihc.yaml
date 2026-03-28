@@ -1,0 +1,19 @@
+version: 1
+name: "barriernet default IHC/IF markers"
+description: "Default must-appear marker modules for protein/IHC/IF panels. Users can remap via YAML."
+modules:
+  CAF_ECM: [COL1A1, COL1A2, COL3A1, LUM, DCN, POSTN, ACTA2, TAGLN, FAP, FN1]
+  TAM_SUP: [SPP1, APOE, TREM2, C1QA, C1QB, C1QC, LGALS3, MARCO, IL10, STAT3]
+  APM: [B2M, HLA-A, HLA-B, HLA-C, TAP1, TAP2, PSMB8, PSMB9]
+  IFN: [STAT1, IRF1, CXCL9, CXCL10]
+  TLS_B: [CXCL13, MS4A1, CD79A, CD74, MZB1]
+  T_CELL: [CD3D, CD3E, CD8A, TRAC, GZMB]
+  STF3: [FAP, INHBA, COL1A1, COL1A2, FN1]
+axes:
+  Barrier:
+    positive_modules: [CAF_ECM, TAM_SUP]
+  Immune:
+    positive_modules: [APM, IFN, TLS_B, T_CELL]
+  NetImmune:
+    positive_modules: [APM, IFN, TLS_B, T_CELL]
+    negative_modules: [CAF_ECM, TAM_SUP]

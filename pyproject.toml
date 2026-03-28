@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "barriernet"
+version = "0.2.0"
+description = "Barrier/NetImmune portable scoring and Visium spatial ring/peak summaries."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy", "pandas", "pyyaml"]
+
+[project.scripts]
+barriernet = "barriernet.cli:main"
